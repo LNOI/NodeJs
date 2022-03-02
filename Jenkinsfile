@@ -2,9 +2,14 @@ pipeline{
     agent any
     stages{
         stage("init"){
-            steps{
-                sh "echo 'init success'"
+            try{
+                sh 'node -v'
+                sh 'npm -v'
             }
+            catch{
+                sh  'echo "npm not found!"'
+            }
+           
         }
     }
 }
