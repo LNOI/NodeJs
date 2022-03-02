@@ -8,6 +8,7 @@ pipeline{
                         sh 'node -v'
                         sh 'npm -v'
                         sh "npm install"
+                        // sh "echo 'WebHook for project'"
                         sh "echo 'WebHook for project'"
                     }
                     catch(error){
