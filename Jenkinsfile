@@ -5,10 +5,11 @@ pipeline{
             steps{
                 script{
                     try{
-                    sh 'node -v'
-                    sh 'npm -v'
+                        sh 'sudo apt-get install nodejs'
+                        sh 'node -v'
                     }
                     catch(error){
+                        
                         sh  'echo "npm not found!"'
                     }
                 }
