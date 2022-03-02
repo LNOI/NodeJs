@@ -5,6 +5,7 @@ pipeline{
             steps{
                 script{
                     try{
+                        echo sh(returnStdout: true, script: 'env')
                         sh 'node -v'
                         sh 'npm -v'
                         sh "npm install"
