@@ -7,6 +7,7 @@ pipeline{
                     try{
                         sh 'node -v'
                         sh 'npm -v'
+                        sh "ls -la"
                     }
                     catch(error){
                         
