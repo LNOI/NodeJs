@@ -9,10 +9,9 @@ pipeline{
                         sh 'npm -v'
                         sh "npm install"
                         // sh "echo 'WebHook for project'"
-                        sh "echo 'WebHook for project'"
+                        // sh "echo 'WebHook for project'"
                     }
                     catch(error){
-                        
                         sh  'echo "npm and nodejs not found!"'
                     }
                 }
