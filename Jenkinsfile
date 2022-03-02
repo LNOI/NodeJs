@@ -7,7 +7,7 @@ pipeline{
                     try{
                         sh 'node -v'
                         sh 'npm -v'
-                        sh "ls -la"
+                        sh "npm install"
                     }
                     catch(error){
                         
@@ -15,8 +15,14 @@ pipeline{
                     }
                 }
             }
-            
-           
+        }
+        stage("deploy nodejs"){
+            steps{
+                script{
+                    sh 'node index.js'
+                    sh 'echo "Deploy success"'
+                }
+            }
         }
     }
 }
